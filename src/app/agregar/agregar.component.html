@@ -1,0 +1,55 @@
+<div class="form-container">
+  <h2>Agregar Tipo de Plástico</h2>
+  <form>
+    <!-- Tipo de Plástico -->
+    <label for="tipoPlastico">Tipo de Plástico:</label>
+    <input type="text" id="tipoPlastico" name="tipoPlastico" placeholder="Ejemplo: PET, HDPE, PVC" required>
+
+    <!-- Código de Reciclaje -->
+    <label for="codigoReciclaje">Código de Reciclaje:</label>
+    <select id="codigoReciclaje" name="codigoReciclaje" required>
+      <option value="">Seleccione un código</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+    </select>
+
+    <!-- Color -->
+    <label for="color">Color:</label>
+    <input type="text" id="color" name="color" placeholder="Ejemplo: Blanco, Transparente, Verde" required>
+
+    <!-- Peso Aproximado -->
+    <label for="pesoAproximado">Peso Aproximado (g/kg):</label>
+    <input type="number" id="pesoAproximado" name="pesoAproximado" placeholder="Ejemplo: 500 g" required>
+
+    <!-- Contaminantes -->
+    <label for="contaminantes">Contaminantes:</label>
+    <select id="contaminantes" name="contaminantes" required>
+      <option value="">Seleccione una opción</option>
+      <option value="Sí">Sí</option>
+      <option value="No">No</option>
+    </select>
+
+    <!-- Fecha de Ingreso -->
+    <label for="fechaIngreso">Fecha de Ingreso:</label>
+    <input type="datetime-local" id="fechaIngreso" name="fechaIngreso" required>
+
+    <!-- Proveedor -->
+    <label for="proveedor">Proveedor:</label>
+    <input type="text" id="proveedor" name="proveedor" placeholder="Nombre o identificador del proveedor" required>
+
+    <!-- Observaciones -->
+    <label for="observaciones">Observaciones:</label>
+    <textarea id="observaciones" name="observaciones" rows="3" placeholder="Anotaciones adicionales"></textarea>
+
+    <button type="submit">Agregar</button>
+
+    <button (click)="redirectToRoute()" class="submit-btn">home</button>
+
+  </form>
+
+</div>

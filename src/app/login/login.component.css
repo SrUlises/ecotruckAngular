@@ -1,0 +1,112 @@
+/* Contenedor de la página de login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e9ecef;
+  /* Modificado para un tono gris más claro */
+}
+
+/* Caja del formulario */
+.login-box {
+  background-color: white;
+  padding: 40px;
+  /* Aumentado para más espacio alrededor */
+  border-radius: 15px;
+  /* Incrementado para bordes más redondeados */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  /* Sombra aumentada */
+  width: 320px;
+  /* Ampliado para un poco más de espacio */
+  text-align: center;
+}
+
+/* Avatar */
+.avatar {
+  margin-bottom: 25px;
+  /* Espaciado mayor debajo del avatar */
+}
+
+.avatar-img {
+  width: 70px;
+  /* Tamaño de la imagen aumentado */
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0056b3;
+  /* Color de borde más oscuro */
+}
+
+/* Estilo de los campos de entrada */
+.input-group {
+  margin-bottom: 25px;
+  /* Mayor espacio entre campos */
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 15px;
+  /* Aumentado ligeramente para mejor visibilidad */
+  margin-bottom: 6px;
+  color: #444;
+  /* Color de texto ligeramente más oscuro */
+}
+
+.input-group input {
+  width: 100%;
+  /*usuario y contraseña*/
+  padding: 12px;
+  /* Aumentado para una apariencia más limpia */
+  font-size: 15px;
+  border: 1px solid #bbb;
+  /* Borde más claro para menor contraste */
+  border-radius: 8px;
+  /* Bordes redondeados aumentados */
+  outline: none;
+}
+
+.input-group input:focus {
+  border-color: #0056b3;
+  /* Color de enfoque más oscuro */
+  box-shadow: 0 0 6px rgba(0, 91, 187, 0.2);
+  /* Sombra en enfoque */
+}
+
+/* Botón de submit */
+.submit-btn {
+  width: 108%;
+  /*boton*/
+  padding: 14px;
+  /* Aumentado para más altura */
+  background-color: #0056b3;
+  /* Color más oscuro y profesional */
+  color: white;
+  font-size: 17px;
+  /* Aumentado para mayor legibilidad */
+  border: none;
+  border-radius: 8px;
+  /* Bordes más redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  /* Transición mejorada */
+  display: flex;
+  justify-content: center;
+
+}
+
+.submit-btn:hover {
+  background-color: #00408a;
+  /* Tono ligeramente más oscuro en hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 91, 0.3);
+  /* Sombra en hover */
+}
+
+/* Estilo de hover */
+.submit-btn:active {
+  background-color: #00295e;
+  /* Color más oscuro en el clic */
+  box-shadow: 0 2px 4px rgba(0, 0, 91, 0.4);
+  /* Sombra reducida en el clic */
+}

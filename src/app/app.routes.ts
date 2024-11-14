@@ -12,5 +12,6 @@ export const routes: Routes = [
   { path: "agregar", component: AgregarComponent },
   { path: "estado", component: EstadoComponent },
   { path: "home", component: HomeComponent },
+  { path: "home", component: HomeComponent },
 
 ];

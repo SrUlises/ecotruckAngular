@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-estado',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './estado.component.css'
 })
 export class EstadoComponent {
+  constructor(private router: Router) { }
 
+  redirectToRoute() {
+    this.router.navigate(['/home']);
+  }
 }

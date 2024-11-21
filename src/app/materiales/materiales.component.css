@@ -1,0 +1,33 @@
+.principal {
+  display: flex;
+}
+
+.container {
+  margin: 20px;
+}
+
+.materiales button {
+  display: block;
+  margin: 5px 0;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  background-color: #ddd;
+}
+
+.contenedor {
+  width: 100px;
+  height: 300px;
+  border: 2px solid black;
+  position: relative;
+  background-color: #e0e0e0;
+}
+
+.llenado {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  transition: height 0.5s ease, background-color 0.5s ease;
+}

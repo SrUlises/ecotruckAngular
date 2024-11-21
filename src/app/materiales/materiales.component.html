@@ -1,0 +1,32 @@
+<h2>Sección Materiales</h2>
+
+<div class="principal">
+
+  <div class="container">
+    <section>
+      <h3>Materiales</h3>
+      <div class="materiales" *ngFor="let material of materiales">
+        <button (click)="seleccionarMaterial(material)">
+          {{ material.nombre }}
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <div class="container" *ngIf="materialSeleccionado">
+    <section>
+      <h3>Porcentaje de la Tolva para {{ materialSeleccionado.nombre }}</h3>
+      <div class="contenedor">
+        <div
+          class="llenado"
+          [style.height.%]="materialSeleccionado.nivelLlenado"
+          [ngStyle]="{ 'background-color': materialSeleccionado.nivelLlenado < 40 ? 'red' : 'green' }"
+        ></div>
+      </div>
+
+      <p>{{ materialSeleccionado.nivelLlenado }} %</p>
+    </section>
+  </div>
+
+</div>
+

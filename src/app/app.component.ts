@@ -21,3 +21,4 @@ import { EstadoComponent } from './estado/estado.component';
 export class AppComponent {
   title = 'ecotruckAngular';
 }
+

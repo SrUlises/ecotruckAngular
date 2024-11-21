@@ -1,19 +1,54 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { LoginService } from '../servicios/login.service';
+import { FormGroup, FormBuilder, Validators, FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   standalone: true,
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  constructor(private router: Router) { }
+  loginForm: FormGroup;
 
-  // Método que se ejecuta cuando se presiona el botón
-  redirectToRoute() {
-    this.router.navigate(['/home']); // Redirige a la ruta especificada
+  constructor(
+    private fb: FormBuilder,
+    private loginService: LoginService,
+    private router: Router,
+  ) {
+    this.loginForm = this.fb.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required],
+    });
+  }
+
+  iniciarSesion() {
+    if (this.loginForm.invalid) {
+      alert('Por favor, completa todos los campos.');
+      return;
+    }
+
+    const { username, password } = this.loginForm.value;
+
+    this.loginService.verificarCredenciales(username, password).subscribe(
+      (response) => {
+        alert('Inicio de sesión exitoso');
+        this.router.navigate(['/home']); // Redirigir al componente "Home"
+      },
+      (error) => {
+        alert(error.error.message || 'Error al iniciar sesión');
+      }
+    );
   }
 }
+
+
+
+

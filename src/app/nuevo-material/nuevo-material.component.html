@@ -1,0 +1,41 @@
+<!-- nuevo-material.component.html -->
+<div class="form-container">
+    <h2>Agregar Nuevo Material</h2>
+    <form (ngSubmit)="onSubmit()" #materialForm="ngForm">
+      <div class="form-group">
+        <label for="nombreMaterial">Nombre del Material</label>
+        <input
+          type="text"
+          id="nombreMaterial"
+          name="nombre"
+          [(ngModel)]="nuevoMaterial.nombre"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="descripcionMaterial">Descripción</label>
+        <textarea
+          id="descripcionMaterial"
+          name="descripcion"
+          [(ngModel)]="nuevoMaterial.descripcion"
+          required
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="nivelLlenado">Nivel de Llenado (%)</label>
+        <input
+          type="number"
+          id="nivelLlenado"
+          name="nivelLlenado"
+          [(ngModel)]="nuevoMaterial.nivelLlenado"
+          min="0"
+          max="100"
+          required
+        />
+      </div>
+
+      <button type="submit" [disabled]="!materialForm.valid">Agregar Material</button>
+    </form>
+  </div>

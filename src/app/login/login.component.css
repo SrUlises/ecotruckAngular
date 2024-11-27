@@ -10,7 +10,7 @@
 
 /* Caja del formulario */
 .login-box {
-  background-color: white;
+  background-color: #E8E1DB;
   padding: 40px;
   /* Aumentado para más espacio alrededor */
   border-radius: 15px;
@@ -34,7 +34,7 @@
   height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #0056b3;
+  border: 3px solid #A9AC5D;
   /* Color de borde más oscuro */
 }
 
@@ -80,7 +80,7 @@
   /*boton*/
   padding: 14px;
   /* Aumentado para más altura */
-  background-color: #0056b3;
+  background-color: #A9AC5D;
   /* Color más oscuro y profesional */
   color: white;
   font-size: 17px;
@@ -97,7 +97,7 @@
 }
 
 .submit-btn:hover {
-  background-color: #00408a;
+  background-color: #6D6C3C;
   /* Tono ligeramente más oscuro en hover */
   box-shadow: 0 4px 8px rgba(0, 0, 91, 0.3);
   /* Sombra en hover */

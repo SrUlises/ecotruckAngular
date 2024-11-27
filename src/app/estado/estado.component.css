@@ -72,3 +72,36 @@ button:hover {
 #btnVacio:hover {
   background-color: #555;
 }
+
+/* percentage-bar.component.css */
+.rectangulo {
+  width: 100px;
+  /* Ancho del rectángulo */
+  height: 150px;
+  /* Altura del rectángulo */
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  margin: 20px auto;
+  /* Centrar el rectángulo */
+}
+
+.relleno {
+  width: 100%;
+  /* Ocupa todo el ancho */
+  background-color: #4caf50;
+  /* Color del relleno */
+  transition: height 0.3s ease;
+  /* Animación suave para el llenado */
+  position: absolute;
+  bottom: 0;
+  /* Inicia desde abajo hacia arriba */
+}
+
+.alerta {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}

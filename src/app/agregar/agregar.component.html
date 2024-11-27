@@ -3,11 +3,12 @@
   <form>
     <!-- Tipo de Plástico -->
     <label for="tipoPlastico">Tipo de Plástico:</label>
-    <input type="text" id="tipoPlastico" name="tipoPlastico" placeholder="Ejemplo: PET, HDPE, PVC" required>
+    <input type="text" id="tipoPlastico" name="tipoPlastico" [(ngModel)]="material.tipoPlastico"
+      placeholder="Ejemplo: PET, HDPE, PVC" required>
 
     <!-- Código de Reciclaje -->
     <label for="codigoReciclaje">Código de Reciclaje:</label>
-    <select id="codigoReciclaje" name="codigoReciclaje" required>
+    <select id="codigoReciclaje" name="codigoReciclaje" [(ngModel)]="material.codigoReciclaje" required>
       <option value="">Seleccione un código</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -20,15 +21,17 @@
 
     <!-- Color -->
     <label for="color">Color:</label>
-    <input type="text" id="color" name="color" placeholder="Ejemplo: Blanco, Transparente, Verde" required>
+    <input type="text" id="color" name="color" [(ngModel)]="material.color"
+      placeholder="Ejemplo: Blanco, Transparente, Verde" required>
 
     <!-- Peso Aproximado -->
     <label for="pesoAproximado">Peso Aproximado (g/kg):</label>
-    <input type="number" id="pesoAproximado" name="pesoAproximado" placeholder="Ejemplo: 500 g" required>
+    <input type="number" id="pesoAproximado" name="pesoAproximado" [(ngModel)]="material.pesoAprox"
+      placeholder="Ejemplo: 500 g" required>
 
     <!-- Contaminantes -->
     <label for="contaminantes">Contaminantes:</label>
-    <select id="contaminantes" name="contaminantes" required>
+    <select id="contaminantes" name="contaminantes" [(ngModel)]="material.contaminantes" required>
       <option value="">Seleccione una opción</option>
       <option value="Sí">Sí</option>
       <option value="No">No</option>
@@ -36,19 +39,21 @@
 
     <!-- Fecha de Ingreso -->
     <label for="fechaIngreso">Fecha de Ingreso:</label>
-    <input type="datetime-local" id="fechaIngreso" name="fechaIngreso" required>
+    <input type="datetime-local" id="fechaIngreso" name="fechaIngreso" [(ngModel)]="material.fechaIngreso" required>
 
     <!-- Proveedor -->
     <label for="proveedor">Proveedor:</label>
-    <input type="text" id="proveedor" name="proveedor" placeholder="Nombre o identificador del proveedor" required>
+    <input type="text" id="proveedor" name="proveedor" [(ngModel)]="material.proveedor"
+      placeholder="Nombre o identificador del proveedor" required>
 
     <!-- Observaciones -->
     <label for="observaciones">Observaciones:</label>
-    <textarea id="observaciones" name="observaciones" rows="3" placeholder="Anotaciones adicionales"></textarea>
+    <textarea id="observaciones" name="observaciones" [(ngModel)]="material.observaciones" rows="3"
+      placeholder="Anotaciones adicionales"></textarea>
 
-    <button type="submit">Agregar</button>
+    <button (click)="guardarMaterial()" type="submit">Agregar</button>
 
-    <button (click)="redirectToRoute()" class="submit-btn">home</button>
+    <button (click)="redirectToRoute()" class="home-button">home</button>
 
   </form>
 

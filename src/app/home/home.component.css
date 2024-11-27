@@ -28,15 +28,16 @@ p {
 
 /* Recuadro de datos del usuario */
 .user-info {
-  background-color: #e9f7fb;
-  border: 2px solid #007bff;
+  background-color: #E8E1DB;
+  border: 2px solid #3A3C26;
   border-radius: 8px;
   padding: 15px;
   margin: 20px 0;
 }
 
 .user-info h2 {
-  color: #007bff;
+  color: #3A3C26;
+  /*datos de usuario*/
 }
 
 .user-info ul {
@@ -51,7 +52,8 @@ p {
 }
 
 .user-info strong {
-  color: #007bff;
+  color: #3A3C26;
+  /*nombre y puesto*/
 }
 
 /* Estilo para los botones dentro del contenido principal */
@@ -62,7 +64,7 @@ p {
 }
 
 .btn-item {
-  background-color: #4cae4f;
+  background-color: #A9AC5D;
   color: white;
   border: none;
   padding: 15px 25px;
@@ -78,7 +80,7 @@ p {
 }
 
 .btn-item:hover {
-  background-color: #45a049;
+  background-color: #6D6C3C;
   transform: scale(1.05);
 }
 
@@ -92,7 +94,7 @@ p {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #007BFF;
+  background-color: #A9AC5D;
   /* Azul vibrante */
   display: flex;
   justify-content: space-around;
@@ -118,7 +120,7 @@ p {
 }
 
 .nav-item:hover {
-  background-color: #007BFF;
+  background-color: #6D6C3C;
   border-radius: 5px;
   padding: 8px;
 }

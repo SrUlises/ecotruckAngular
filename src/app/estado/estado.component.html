@@ -4,7 +4,13 @@
 
   <div class="porcentaje-container">
     <p>Porcentaje de llenado:</p>
-    <div class="porcentaje-display">0%</div>
+    <div class="rectangulo">
+      <div class="relleno" [style.height.%]="porcentaje" [style.backgroundColor]="porcentaje < 20 ? 'red' : '#4caf50'">
+      </div>
+
+    </div>
+    <p>Llenado: {{ porcentaje }}%</p>
+
   </div>
 
   <div class="botones">

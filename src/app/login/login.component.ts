@@ -37,6 +37,8 @@ export class LoginComponent {
 
     const { username, password } = this.loginForm.value;
 
+    console.log(username + password);
+
     this.loginService.verificarCredenciales(username, password).subscribe(
       (response) => {
         alert('Inicio de sesión exitoso');

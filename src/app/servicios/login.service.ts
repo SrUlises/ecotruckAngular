@@ -14,6 +14,11 @@ export class LoginService {
 
   verificarCredenciales(username: String, password: String): Observable<any> {
     return this.http.post(`${this.url}/login`, { username, password });
+  }
 
+
+  // Método para obtener los nombres de los usuarios
+  getUsuarios(): Observable<any[]> {
+    return this.http.get<any[]>(this.url + "/usuarios");
   }
 }

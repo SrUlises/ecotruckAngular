@@ -12,8 +12,8 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  verificarCredenciales(username: String, password: String): Observable<any> {
-    return this.http.post(`${this.url}/login`, { username, password });
+  login(name: string, password: string): Observable<any> {
+    return this.http.post(`${this.url}/login`, { name, password });
   }
 
 

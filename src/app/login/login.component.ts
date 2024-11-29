@@ -24,7 +24,7 @@ export class LoginComponent {
     private router: Router,
   ) {
     this.loginForm = this.fb.group({
-      username: ['', Validators.required],
+      name: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
@@ -35,11 +35,11 @@ export class LoginComponent {
       return;
     }
 
-    const { username, password } = this.loginForm.value;
+    const { name, password } = this.loginForm.value;
 
-    console.log(username + password);
+    console.log(name + password);
 
-    this.loginService.verificarCredenciales(username, password).subscribe(
+    this.loginService.login(name, password).subscribe(
       (response) => {
         alert('Inicio de sesión exitoso');
         this.router.navigate(['/home']); // Redirigir al componente "Home"

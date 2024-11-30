@@ -1,44 +1,47 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../servicios/login.service';
-
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [
+    CommonModule
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-
-  usuario: { username: string; position?: string } = { username: '', position: '' }; // Modelo básico para el usuario
-
+  userInfo: any;
 
   constructor(private router: Router, private LoginService: LoginService) { }
 
   agregar() {
     this.router.navigate(['/agregar']); // Redirige a la ruta especificada
-  };
+  }
+
   estado() {
     this.router.navigate(['/estado']);
+  }
 
-  };
   ngOnInit(): void {
-    this.LoginService.getUsuarios().subscribe({
-      next: (data) => {
-        // Asumimos que el API devuelve un arreglo, tomamos el primer usuario como ejemplo
-        if (data.length > 0) {
-          this.usuario.username = data[0].name; // Obtener el username del primer usuario
-          this.usuario.position = data[0].position; // Agregar un dato fijo o dinámico según tu API
+    // Recupera el nombre de usuario guardado en localStorage
+    const name = localStorage.getItem('username');
+
+    if (name) {
+      // Hace la solicitud para obtener los datos del usuario
+      this.LoginService.getUserInfo(name).subscribe({
+        next: (data) => {
+          this.userInfo = data.user; // Información del usuario
+        },
+        error: (err) => {
+          console.error('Error al obtener la información del usuario:', err);
         }
-      },
-      error: (error) => {
-        console.error('Error al obtener los usuarios:', error);
-      },
-    });
+      });
+    } else {
+      console.error('No se encontró el nombre de usuario en localStorage.');
+      this.router.navigate(['/login']); // Redirige al login si no hay usuario
+    }
   }
 }
-
-
-

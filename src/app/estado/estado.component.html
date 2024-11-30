@@ -13,8 +13,8 @@
   </div>
 
   <div class="botones">
-    <button id="btnIniciar">Iniciar</button>
-    <button id="btnParar">Parar</button>
+    <button id="btnIniciar" (click)="controlarActuador('/encender-motor')">Iniciar</button>
+    <button id="btnParar" (click)="controlarActuador('/apagar-motor')">Parar</button>
     <button (click)="redirectToRoute()" class="submit-btn">home</button>
   </div>
 </div>

@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
   private url = 'http://localhost:3000/users';
+  private urlesp32 = "http://192.168.1.122";
 
 
   constructor(private http: HttpClient) { }
@@ -17,8 +18,13 @@ export class LoginService {
   }
 
 
-  // Método para obtener los nombres de los usuarios
-  getUsuarios(): Observable<any[]> {
-    return this.http.get<any[]>(this.url + "/usuarios");
+  // Método para obtener información del usuario
+  getUserInfo(name: string): Observable<any> {
+    return this.http.get(`${this.url}/user/${name}`);
+  }
+
+  controlarActuador(endpoint: string): Observable<any> {
+    return this.http.get(`${this.urlesp32}${endpoint}`);
   }
 }
+

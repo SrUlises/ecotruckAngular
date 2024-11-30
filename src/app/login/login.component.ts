@@ -39,15 +39,18 @@ export class LoginComponent {
 
     console.log(name + password);
 
-    this.loginService.login(name, password).subscribe(
-      (response) => {
+    this.loginService.login(name, password).subscribe({
+      next: (response) => {
+        // Guarda el nombre del usuario
+        localStorage.setItem('username', response.user.name);
+
         alert('Inicio de sesión exitoso');
-        this.router.navigate(['/home']); // Redirigir al componente "Home"
+        this.router.navigate(['/home']); // Redirige al componente "Home"
       },
-      (error) => {
+      error: (error) => {
         alert(error.error.message || 'Error al iniciar sesión');
-      }
-    );
+      },
+    });
   }
 }
 

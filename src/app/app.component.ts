@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { AgregarComponent } from './agregar/agregar.component';
-import { EstadoComponent } from './estado/estado.component';
+//import { EstadoComponent } from './estado/estado.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +14,7 @@ import { EstadoComponent } from './estado/estado.component';
     LoginComponent,
     HomeComponent,
     AgregarComponent,
+
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

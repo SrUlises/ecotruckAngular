@@ -6,15 +6,16 @@
     <div class="rectangulo">
       <div class="relleno" [style.height.%]="porcentaje" [style.backgroundColor]="porcentaje < 20 ? 'red' : '#4caf50'">
       </div>
-
     </div>
     <p>Llenado: {{ porcentaje }}%</p>
-
   </div>
 
   <div class="botones">
-    <button id="btnIniciar" (click)="controlarActuador('/encender-motor')">Iniciar</button>
-    <button id="btnParar" (click)="controlarActuador('/apagar-motor')">Parar</button>
-    <button (click)="redirectToRoute()" class="submit-btn">home</button>
+    <!-- Botones para controlar el LED -->
+    <button id="btnIniciar" (click)="controlarActuador('on')">Iniciar LED</button>
+    <button id="btnParar" (click)="controlarActuador('off')">Apagar LED</button>
+
+    <!-- Botón para redirigir a Home -->
+    <button (click)="redirectToRoute()" class="submit-btn">Home</button>
   </div>
 </div>

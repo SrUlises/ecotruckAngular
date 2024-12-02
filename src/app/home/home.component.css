@@ -37,7 +37,6 @@ p {
 
 .user-info h2 {
   color: #3A3C26;
-  /*datos de usuario*/
 }
 
 .user-info ul {
@@ -53,7 +52,6 @@ p {
 
 .user-info strong {
   color: #3A3C26;
-  /*nombre y puesto*/
 }
 
 /* Estilo para los botones dentro del contenido principal */
@@ -95,21 +93,21 @@ p {
   left: 0;
   width: 100%;
   background-color: #A9AC5D;
-  /* Azul vibrante */
+  /* Color base */
   display: flex;
   justify-content: space-around;
-  padding: 0px 0;
+  padding: 0;
   box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
   z-index: 100;
 }
 
+/* Estilo de los botones de la barra de navegación */
 .nav-item {
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   text-decoration: none;
-  font-size: 16px;
   padding: 10px;
   transition: background-color 0.3s;
 }
@@ -117,28 +115,24 @@ p {
 .nav-item img {
   width: 40px;
   height: 40px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Hover: cambia el fondo y hace zoom en la imagen */
 .nav-item:hover {
   background-color: #6D6C3C;
+  /* Color al pasar el cursor */
   border-radius: 5px;
   padding: 8px;
 }
 
-.nav-item:focus {
-  outline: none;
+.nav-item:hover img {
+  transform: scale(1.1);
+  /* Zoom suave */
+  opacity: 0.8;
+  /* Transparencia al pasar el cursor */
 }
 
-/* Responsividad: ajusta el diseño para pantallas más pequeñas */
-@media (max-width: 600px) {
-  .buttons {
-    flex-direction: column;
-  }
-
-  .btn-item {
-    width: 80%;
-    margin-bottom: 15px;
-  }
-
-
+.nav-item:focus {
+  outline: none;
 }

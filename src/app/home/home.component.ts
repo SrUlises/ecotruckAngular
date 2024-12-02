@@ -44,4 +44,14 @@ export class HomeComponent {
       this.router.navigate(['/login']); // Redirige al login si no hay usuario
     }
   }
+
+  // Método para cerrar sesión
+  logout() {
+    this.LoginService.logout(); 
+    this.router.navigate(['/login']);
+  }
+
+  ajustes() {
+    this.router.navigate(['/ajustes']);
+  }
 }

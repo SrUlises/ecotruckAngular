@@ -9,12 +9,12 @@
     <form class="login-form" [formGroup]="loginForm" (ngSubmit)="iniciarSesion()">
       <div class="input-group">
         <label for="ususario">Usuario</label>
-        <input type="text" id="name" formControlName="name" placeholder="Enter your name" required>
+        <input type="text" id="name" formControlName="name" placeholder="Ingrese su usuario" required>
       </div>
 
       <div class="input-group">
         <label for="contraseña">Contraseña</label>
-        <input type="password" id="password" formControlName="password" placeholder="Enter your password" required>
+        <input type="password" id="password" formControlName="password" placeholder="Ingrese su contraseña" required>
       </div>
 
       <button type="submit" class="submit-btn">Ingresar</button>

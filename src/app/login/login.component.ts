@@ -34,26 +34,23 @@ export class LoginComponent {
       alert('Por favor, completa todos los campos.');
       return;
     }
-
+  
     const { name, password } = this.loginForm.value;
-
+  
     console.log(name + password);
-
+  
     this.loginService.login(name, password).subscribe({
       next: (response) => {
         // Guarda el nombre del usuario
         localStorage.setItem('username', response.user.name);
-
+  
         alert('Inicio de sesión exitoso');
         this.router.navigate(['/home']); // Redirige al componente "Home"
       },
-      error: (error) => {
-        alert(error.error.message || 'Error al iniciar sesión');
+      error: (errorMessage) => {
+        // Mostrar el mensaje de error recibido desde el servicio
+        alert(errorMessage || 'Error al iniciar sesión');
       },
     });
-  }
+  }  
 }
-
-
-
-

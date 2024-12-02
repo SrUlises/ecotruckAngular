@@ -19,7 +19,7 @@
       <button (click)="agregar()" class="btn-item">Agregar</button>
     </div>
     <div>
-      <button (click)="estado()" class="btn-item ">estado</button>
+      <button (click)="estado()" class="btn-item ">Estado</button>
     </div>
   </div>
 </div>
@@ -39,11 +39,11 @@
   </div>
 
   <div class="navbar">
-    <a routerLink="/configuracion" class="nav-item">
-      <img src="assets/images/gear.png" alt="Configuración">
+    <a routerLink="/configuracion" (click)="ajustes()" class="nav-item">
+      <img src="assets/images/user.png" alt="Configuración">
     </a>
-    <a routerLink="/logout" class="nav-item" title="Cerrar sesión">
-      <img src="assets/images/logout.png" alt="Cerrar sesión">
+    <a routerLink="/logout" (click)="logout()" class="nav-item" title="Cerrar sesión">
+      <img src="assets/images/logout-512.webp" alt="Cerrar sesión">
     </a>
 
   </div>

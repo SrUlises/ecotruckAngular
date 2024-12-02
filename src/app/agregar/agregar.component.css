@@ -1,11 +1,12 @@
 /* Contenedor del formulario */
 .form-container {
-  max-width: 450px;
+  max-width: 30rem;
   margin: auto;
   padding: 20px;
   background-color: #E8E1DB;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif, "Source Sans Pro";
 }
 
 .form-container h2 {
@@ -24,9 +25,20 @@ form label {
 form input[type="text"],
 form input[type="number"],
 form input[type="datetime-local"],
-form select,
 form textarea {
+  width: 95%;
+  max-width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+.select-reciclaje, 
+.select-contaminantes {
   width: 100%;
+  max-width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
@@ -45,7 +57,8 @@ form textarea {
 /* Botón Agregar */
 form button[type="submit"] {
   flex: 1;
-  padding: 10px;
+  padding: 0.5rem;
+  margin-right: 0.25rem;
   background-color: #A9AC5D;
   color: white;
   border: none;
@@ -63,7 +76,8 @@ form button[type="submit"]:hover {
 /* Botón Volver al Home */
 .home-button {
   flex: 1;
-  padding: 10px;
+  padding: 0.5rem;
+  margin-left: 0.25rem;
   background-color: #A9AC5D;
   color: white;
   border: none;
@@ -76,4 +90,12 @@ form button[type="submit"]:hover {
 .home-button:hover {
   background-color: #A9AC5D;
   transform: scale(1.05);
+}
+
+.botones {
+  flex-direction: row;
+  position: relative;
+  display: flex;
+  /* padding: 0.5re; */
+  align-content: space-between;
 }

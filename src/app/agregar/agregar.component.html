@@ -8,7 +8,7 @@
 
     <!-- Código de Reciclaje -->
     <label for="codigoReciclaje">Código de Reciclaje:</label>
-    <select id="codigoReciclaje" name="codigoReciclaje" [(ngModel)]="material.codigoReciclaje" required>
+    <select id="codigoReciclaje" class="select-reciclaje" name="codigoReciclaje" [(ngModel)]="material.codigoReciclaje" required>
       <option value="">Seleccione un código</option>
       <option value="1">1</option>
       <option value="2">2</option>
@@ -31,7 +31,7 @@
 
     <!-- Contaminantes -->
     <label for="contaminantes">Contaminantes:</label>
-    <select id="contaminantes" name="contaminantes" [(ngModel)]="material.contaminantes" required>
+    <select id="contaminantes" class="select-contaminantes" name="contaminantes" [(ngModel)]="material.contaminantes" required>
       <option value="">Seleccione una opción</option>
       <option value="Sí">Sí</option>
       <option value="No">No</option>
@@ -51,9 +51,15 @@
     <textarea id="observaciones" name="observaciones" [(ngModel)]="material.observaciones" rows="3"
       placeholder="Anotaciones adicionales"></textarea>
 
-    <button (click)="guardarMaterial()" type="submit">Agregar</button>
 
-    <button (click)="redirectToRoute()" class="home-button">home</button>
+    <div class="botones">
+
+      <button (click)="guardarMaterial()" type="submit">Agregar</button>
+
+    <button (click)="redirectToRoute()" class="home-button">Home</button>
+
+    </div>
+    
 
   </form>
 
